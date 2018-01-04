@@ -1,0 +1,13 @@
+<div class="tabbable tabs-left">
+  <ul class="nav nav-tabs">
+    <li *ngFor="let tab of ethereumTopicTabs">
+      <a routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
+    </li>
+  </ul>
+</div>
+<div class="container">
+  <div class="tab-content">
+  <router-outlet></router-outlet>
+</div>
+</div>
+
