@@ -1,0 +1,25 @@
+<div class="content">
+  <h1>Working with GETH</h1>
+<br />
+<p>
+  <b>Download and Install Geth: </b>Download the geth from <a href="https://geth.ethereum.org/downloads" target="_blank">Download Geth</a> and install on to your machine.
+</p>
+<br />
+<p>
+  <b>Running Geth: </b> To run <i>geth</i> in windows, open powershell and type geth command. In linux or mac, run the geth command by opening a terminal. In this tutorial we will use windows OS.
+</p>
+  <br />
+  <img src="../assets/geth/starting_geth.jpg">
+<br />
+<p>
+  When you run <i>geth</i> command for the first time, geth runs in fast sync mode (to understand sync modes, refer How it Works section) and downloads the blocks on to your local machine. In subsequent runs, geth will run in full sync mode. To stop a running geth, use <b><i>Ctrl+C</i></b> command. The path where the blocks gets stored in our computer varies based on OS.
+</p>
+  <ul>
+    <li>Windows - ~home_directory\AppData\Roaming\Ethereum</li>
+    <li>Linux - ~home_directory/.ethereum</li>
+    <li>Mac Os - ~home_directory/Library/Ethereum</li>
+  </ul>
+  <br />
+  Ethereum folder has <b><i>geth</i></b> and <b><i>key</i></b> sub folders. geth folder contains all the block data where as key folder contains the keys. If you want to run the geth in Fast scan mode, you need to delete <b><i>chaindata</i></b> folder which is under geth folder.
+</div>
+
