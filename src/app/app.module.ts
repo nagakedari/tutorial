@@ -10,6 +10,7 @@ import { TypesofblockchainComponent } from './typesofblockchain/typesofblockchai
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ChaptersComponent } from './chapters/chapters.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
+import { GethComponent } from './geth/geth.component';
 // import { AppSettings } from './settings/settings.component';
 
 
@@ -21,7 +22,8 @@ import { HowitworksComponent } from './howitworks/howitworks.component';
     TypesofblockchainComponent,
     IntroductionComponent,
     ChaptersComponent,
-    HowitworksComponent
+    HowitworksComponent,
+    GethComponent
   ],
   imports: [
     routes,

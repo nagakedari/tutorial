@@ -12,11 +12,11 @@
   <b>1. Connecting and Syncing: </b> In this step, Geth connects to other nodes and try to download the blocks on to the local machine by syncing with the network. There are 3 types of syncing.
 </p>
 <ul>
-  <li>Full Sync - In this mode, geth downloads all the blocks from the begining and re process all the transactions. Hence it requires lot of disk space and takes for ever</li>
-  <li>Fast Sync - In this mode, geth only downloads the last 1024 transactions and re process only those transactions. Hence it requires less space when compared to Full sync and takes hours for completion</li>
-  <li>Light Sync - In this mode, geth downloads only the the header portion of a block and downloads only current snapshot of transactions. It requires very less space and takes only few minutes to complete. But this is new way of syncing and its still in experimental phase, hence no gurentee that it works all times.</li>
+  <li>Full Sync - In this mode, geth downloads all the blocks (Block Headers + Block Bodies) from the begining and re process all the transactions. Hence it requires lot of disk space and takes for ever</li>
+  <li>Fast Sync - In this mode, geth downloads all the blocks and process last 1024 transactions. Hence it requires less space when compared to Full sync and takes hours for completion</li>
+  <li>Light Sync - In this mode, geth downloads only the the header portion of a block and process current snapshot of transactions. It requires very less space and takes only few minutes to complete. But this is new way of syncing and its still in experimental phase, hence no gurentee that it works all times.</li>
 </ul>
-  <img src="../assets/images/types_of_sync.jpg">
+  <img src="../assets/howitworks/types_of_sync.jpg">
 <p>
   <b>2. Javascript JSON RPC: </b> In this step, Geth opens Javascript RPC so that you can issue commands to blockchain. There are two ways you can interact with Javascript RPC.
 </p>
@@ -24,6 +24,10 @@
   <li>IPC (Inter Process Communication) : Interact using file or pipe</li>
   <li>Http RPC : This enables a browser to interact with Javascript RPC. This is where web3.js will come in to picture.</li>
 </ul>
-
+    <img src="../assets/howitworks/Javascript_Json_Rpc.JPG">
+  <br />
+  <p>
+    The following diagram gives an overview of how it works.
+    <img src="../assets/howitworks/Overview.JPG">
 </div>
 
