@@ -52,6 +52,7 @@
   min-width: 74px;
   margin-right: 0;
   margin-bottom: 3px;
+  max-width: 170px;
 }
 
 .tabs-left > .nav-tabs {

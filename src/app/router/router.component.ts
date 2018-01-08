@@ -8,6 +8,7 @@ import { BlockchainComponent } from '../blockchain/blockchain.component';
 import { HowitworksComponent } from '../howitworks/howitworks.component';
 import { GethComponent } from '../geth/geth.component';
 import { TypesofblockchainComponent } from '../typesofblockchain/typesofblockchain.component';
+import { PrivatenetworkComponent } from '../privatenetwork/privatenetwork.component';
 
 
 export const router : Routes = [
@@ -16,7 +17,9 @@ export const router : Routes = [
   {path: 'eco', component: EcosystemComponent },
   {path: 'blockchain', component: BlockchainComponent },
   {path: 'howitworks', component: HowitworksComponent },
-  {path: 'geth', component: GethComponent }
+  {path: 'geth', component: GethComponent },
+  {path: 'typesofblockchain', component: TypesofblockchainComponent },
+  {path: 'privatenetwork', component: PrivatenetworkComponent },
 ];
 
 export const routes : ModuleWithProviders  = RouterModule.forRoot (router);

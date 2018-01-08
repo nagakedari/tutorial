@@ -11,6 +11,7 @@ import { IntroductionComponent } from './introduction/introduction.component';
 import { ChaptersComponent } from './chapters/chapters.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
 import { GethComponent } from './geth/geth.component';
+import { PrivatenetworkComponent } from './privatenetwork/privatenetwork.component';
 // import { AppSettings } from './settings/settings.component';
 
 
@@ -23,7 +24,8 @@ import { GethComponent } from './geth/geth.component';
     IntroductionComponent,
     ChaptersComponent,
     HowitworksComponent,
-    GethComponent
+    GethComponent,
+    PrivatenetworkComponent
   ],
   imports: [
     routes,

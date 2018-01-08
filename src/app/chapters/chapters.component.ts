@@ -15,7 +15,9 @@ export class ChaptersComponent implements OnInit {
         {name : " What is Blockchain", path : "blockchain"},
         {name : " Ethereum EcoSystem", path : "eco"},
         {name : " How it works?", path : "howitworks"},
-        {name : " Working with GETH", path : "geth"}
+        {name : " Working with GETH", path : "geth"},
+        {name : " Types Of Blockchain and Networks", path : "typesofblockchain"},
+        {name : " Creating A Private Network", path : "privatenetwork"}
     ];
   }
 
