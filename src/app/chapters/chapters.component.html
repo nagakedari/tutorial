@@ -1,7 +1,7 @@
 <div class="tabbable tabs-left">
   <ul class="nav nav-tabs">
-    <li *ngFor="let tab of ethereumTopicTabs">
-      <a routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
+    <li *ngFor="let tab of ethereumTopicTabs; let i= index">
+      <a routerLink="{{tab.path}}" data-toggle="tab" (click)="selectedTab" [class.active]="i==selectedTabIndex">{{tab.name}}</a>
     </li>
   </ul>
 </div>

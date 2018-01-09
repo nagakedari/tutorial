@@ -9,6 +9,7 @@ import { HowitworksComponent } from '../howitworks/howitworks.component';
 import { GethComponent } from '../geth/geth.component';
 import { TypesofblockchainComponent } from '../typesofblockchain/typesofblockchain.component';
 import { PrivatenetworkComponent } from '../privatenetwork/privatenetwork.component';
+import { MiningprivatenetworkComponent } from '../miningprivatenetwork/miningprivatenetwork.component';
 
 
 export const router : Routes = [
@@ -20,6 +21,7 @@ export const router : Routes = [
   {path: 'geth', component: GethComponent },
   {path: 'typesofblockchain', component: TypesofblockchainComponent },
   {path: 'privatenetwork', component: PrivatenetworkComponent },
+  {path: 'mining', component: MiningprivatenetworkComponent }
 ];
 
 export const routes : ModuleWithProviders  = RouterModule.forRoot (router);

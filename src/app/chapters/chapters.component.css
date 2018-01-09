@@ -2,7 +2,7 @@
 .tabs-right > .nav-tabs,
 .tabs-left > .nav-tabs {
   border-bottom: 0;
-  height: auto;
+  height: auto; 
 }
 
 .tab-content > .tab-pane,
@@ -53,6 +53,10 @@
   margin-right: 0;
   margin-bottom: 3px;
   max-width: 170px;
+}
+
+.tabs-left > .nav-tabs > li > a:active{
+  background-color: blue;
 }
 
 .tabs-left > .nav-tabs {

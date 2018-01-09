@@ -1,0 +1,33 @@
+<div class="content">
+  <h1>Mining Private Network</h1>
+  <p>
+    In previous section we have created a private network. In this section let's do mining on the network. To do mining, open powershell and start geth in private network that we created. Open another powershell, attach it to the geth that is running and create an account.
+  </p>
+  <p>
+    <img src="../assets/mining/attach_create_account.jpg">
+  </p>
+  <p>
+    For mining, we need to have a coinbase account set. Whenever someone does mining, the ethers are assigned to this coinbase account. To see the coinbase account use <b>eth.coinbase</b>, if it returns empty then you need to manually set the etherbase (coinbase and etherbase both one and the same) account. To set an etherbase account, use miner endpoint. 
+  </p>
+  <p>
+    <img src="../assets/mining/setting_etherbase_account.jpg">
+  </p>
+  <p>
+    By using miner endpoint, let's start the mining by calling <b>miner.start()</b>. miner.start() accepts a parameter which the number of threads. For this tutorial we will use only one thread. Once you run the start method you can see new block creation log messages in the geth running window.
+  </p>
+  <p>
+    <img src="../assets/mining/starting_mining.jpg">
+  </p>
+  <p>
+    Whenever a new block is sealed, an ether is assigned to the coinbase account. After a while you will notice that the creation of a block takes more time. That is because everytime a block gets created, the complexity increases and hence the mining get diffcult.
+  </p>
+  <p>
+    To check the balance of a coinbase account, we can either use web3 endpoint or the eth. The balance value changes as the new blocks are created. To see the balance in ether denominations use <b>web3.fromWei(eth.getBalance(eth.accounts[0]),"ether")</b>. To stop the mining invoke <b>miner.stop()</b>
+  </p>
+  <p>
+    <img src="../assets/mining/balance_enquiry.jpg">
+  </p>
+  <p>
+    
+  </p>
+</div>

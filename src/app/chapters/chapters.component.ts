@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ChaptersComponent implements OnInit {
 
   ethereumTopicTabs = [];
+  selectedTabIndex : any;
 
   constructor(){
     this.ethereumTopicTabs = [
@@ -17,8 +18,13 @@ export class ChaptersComponent implements OnInit {
         {name : " How it works?", path : "howitworks"},
         {name : " Working with GETH", path : "geth"},
         {name : " Types Of Blockchain and Networks", path : "typesofblockchain"},
-        {name : " Creating A Private Network", path : "privatenetwork"}
+        {name : " Creating A Private Network", path : "privatenetwork"},
+        {name : " Mining A Private Network", path : "mining"},
     ];
+  }
+
+  selectedTab(tabIndex : any) {
+    this.selectedTabIndex = tabIndex;
   }
 
   ngOnInit() {
