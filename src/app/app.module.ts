@@ -13,6 +13,7 @@ import { HowitworksComponent } from './howitworks/howitworks.component';
 import { GethComponent } from './geth/geth.component';
 import { PrivatenetworkComponent } from './privatenetwork/privatenetwork.component';
 import { MiningprivatenetworkComponent } from './miningprivatenetwork/miningprivatenetwork.component';
+import { NavigationComponent } from './navigation/navigation.component';
 // import { AppSettings } from './settings/settings.component';
 
 
@@ -27,7 +28,8 @@ import { MiningprivatenetworkComponent } from './miningprivatenetwork/miningpriv
     HowitworksComponent,
     GethComponent,
     PrivatenetworkComponent,
-    MiningprivatenetworkComponent
+    MiningprivatenetworkComponent,
+    NavigationComponent
   ],
   imports: [
     routes,
