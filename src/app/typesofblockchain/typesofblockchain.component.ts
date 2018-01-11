@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TypesofblockchainComponent implements OnInit {
 
-  constructor() { }
+  nextRoute : any;
+previousRoute : any;
+  constructor() { 
+    this.nextRoute = 'privatenetwork';
+    this.previousRoute = 'geth';
+  }
 
   ngOnInit() {
   }

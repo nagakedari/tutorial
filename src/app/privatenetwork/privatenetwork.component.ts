@@ -17,7 +17,13 @@ genesisJson : any = {
                       gasLimit : "0x8000000",
                       alloc : {}
                     };
-  constructor() { }
+  nextRoute : any;
+previousRoute : any;
+  constructor() { 
+    this.nextRoute = 'mining';
+    this.previousRoute = 'typesofblockchain';
+  }
+
 
   ngOnInit() {
   }

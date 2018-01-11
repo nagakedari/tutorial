@@ -1,4 +1,7 @@
 <div class="content">
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <br/>
   <h1>Mining Private Network</h1>
   <p>
     In previous section we have created a private network. In this section let's do mining on the network. To do mining, open powershell and start geth in private network that we created. Open another powershell, attach it to the geth that is running and create an account.
@@ -30,4 +33,7 @@
   <p>
     I have mined 1840 ethers already :)
   </p>
+  <br/>
+  <app-navigation [previous]="previousRoute" ></app-navigation>
+  
 </div>

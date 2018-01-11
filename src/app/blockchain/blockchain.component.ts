@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blockchain.component.css']
 })
 export class BlockchainComponent implements OnInit {
-
-  constructor() { }
+nextRoute : any;
+previousRoute : any;
+  constructor() { 
+    this.nextRoute = 'eco';
+    this.previousRoute = 'intro';
+  }
 
   ngOnInit() {
   }

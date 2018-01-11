@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GethComponent implements OnInit {
 
-  constructor() { }
+  nextRoute : any;
+previousRoute : any;
+  constructor() { 
+    this.nextRoute = 'typesofblockchain';
+    this.previousRoute = 'howitworks';
+  }
+
 
   ngOnInit() {
   }

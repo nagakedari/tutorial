@@ -1,4 +1,7 @@
 <div class="content">
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <br/>
   <h1>Working with GETH</h1>
 <br />
 <p>
@@ -52,6 +55,10 @@
   Now that we are connected to geth, lets issue javascript commands to json api. For example, to create a new account issue personal,newAccount(); command. The json api will create an account which gets stored under ethereum home directory/keystore. The format of the generated key would be: UTC -- 'Time Stamp of key generation'--'key'
 </p><p><img src="../assets/geth/create_new_account_command.jpg"></p>
 <p> If you want learn more about API, visit <a href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs" target="_blank">Ethereum Management API</a> and <a href="https://github.com/ethereum/wiki/wiki/JSON-RPC" target="_blank">Json-RPC Server</a>
+</p>
+<br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  
 
 </div>
 

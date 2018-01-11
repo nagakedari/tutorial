@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EcosystemComponent implements OnInit {
 
-  constructor() { }
+  nextRoute : any;
+previousRoute : any;
+  constructor() { 
+    this.nextRoute = 'howitworks';
+    this.previousRoute = 'blockchain';
+  }
+
 
   ngOnInit() {
   }

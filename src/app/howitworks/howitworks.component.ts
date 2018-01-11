@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HowitworksComponent implements OnInit {
 
-  constructor() { }
+  nextRoute : any;
+previousRoute : any;
+  constructor() { 
+    this.nextRoute = 'geth';
+    this.previousRoute = 'eco';
+  }
+
 
   ngOnInit() {
   }
