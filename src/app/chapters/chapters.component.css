@@ -55,8 +55,13 @@
   max-width: 170px;
 }
 
-.tabs-left > .nav-tabs > li > a:active{
-  background-color: blue;
+.active-tab{
+  background-color: #3385ff;
+  
+}
+
+.active-tab > a {
+  color: white;
 }
 
 .tabs-left > .nav-tabs {
