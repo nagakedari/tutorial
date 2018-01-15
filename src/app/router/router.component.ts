@@ -10,6 +10,7 @@ import { GethComponent } from '../geth/geth.component';
 import { TypesofblockchainComponent } from '../typesofblockchain/typesofblockchain.component';
 import { PrivatenetworkComponent } from '../privatenetwork/privatenetwork.component';
 import { MiningprivatenetworkComponent } from '../miningprivatenetwork/miningprivatenetwork.component';
+import { SmartcontractComponent } from '../smartcontract/smartcontract.component';
 
 
 export const router : Routes = [
@@ -21,7 +22,8 @@ export const router : Routes = [
   {path: 'geth', component: GethComponent },
   {path: 'typesofblockchain', component: TypesofblockchainComponent },
   {path: 'privatenetwork', component: PrivatenetworkComponent },
-  {path: 'mining', component: MiningprivatenetworkComponent }
+  {path: 'mining', component: MiningprivatenetworkComponent },
+  {path: 'smartcontract', component: SmartcontractComponent }
 ];
 
 export const routes : ModuleWithProviders  = RouterModule.forRoot (router);

@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiningprivatenetworkComponent implements OnInit {
 
-
+nextRoute : any;
 previousRoute : any;
-  constructor() { 
+  constructor() {
+    this.nextRoute = 'smartcontract'; 
     this.previousRoute = 'privatenetwork';
   }
   ngOnInit() {

@@ -20,6 +20,7 @@ export class ChaptersComponent implements OnInit {
         {name : " Types Of Blockchain and Networks", path : "typesofblockchain"},
         {name : " Creating A Private Network", path : "privatenetwork"},
         {name : " Mining A Private Network", path : "mining"},
+        {name : " Understanding Smart Contract", path : "smartcontract"}
     ];
   }
 

@@ -14,6 +14,7 @@ import { GethComponent } from './geth/geth.component';
 import { PrivatenetworkComponent } from './privatenetwork/privatenetwork.component';
 import { MiningprivatenetworkComponent } from './miningprivatenetwork/miningprivatenetwork.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { SmartcontractComponent } from './smartcontract/smartcontract.component';
 // import { AppSettings } from './settings/settings.component';
 
 
@@ -29,7 +30,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     GethComponent,
     PrivatenetworkComponent,
     MiningprivatenetworkComponent,
-    NavigationComponent
+    NavigationComponent,
+    SmartcontractComponent
   ],
   imports: [
     routes,
