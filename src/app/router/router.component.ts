@@ -11,6 +11,7 @@ import { TypesofblockchainComponent } from '../typesofblockchain/typesofblockcha
 import { PrivatenetworkComponent } from '../privatenetwork/privatenetwork.component';
 import { MiningprivatenetworkComponent } from '../miningprivatenetwork/miningprivatenetwork.component';
 import { SmartcontractComponent } from '../smartcontract/smartcontract.component';
+import { SolidityComponent } from '../solidity/solidity.component';
 
 
 export const router : Routes = [
@@ -23,7 +24,8 @@ export const router : Routes = [
   {path: 'typesofblockchain', component: TypesofblockchainComponent },
   {path: 'privatenetwork', component: PrivatenetworkComponent },
   {path: 'mining', component: MiningprivatenetworkComponent },
-  {path: 'smartcontract', component: SmartcontractComponent }
+  {path: 'smartcontract', component: SmartcontractComponent },
+  {path: 'solidity', component: SolidityComponent }
 ];
 
 export const routes : ModuleWithProviders  = RouterModule.forRoot (router);

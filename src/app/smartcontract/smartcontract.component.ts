@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SmartcontractComponent implements OnInit {
 
+  nextRoute : any;
   previousRoute : any;
   constructor() { 
     this.previousRoute = 'mining';
+    this.nextRoute = 'solidity';
   }
   ngOnInit() {
   }

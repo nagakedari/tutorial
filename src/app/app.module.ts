@@ -15,6 +15,7 @@ import { PrivatenetworkComponent } from './privatenetwork/privatenetwork.compone
 import { MiningprivatenetworkComponent } from './miningprivatenetwork/miningprivatenetwork.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SmartcontractComponent } from './smartcontract/smartcontract.component';
+import { SolidityComponent } from './solidity/solidity.component';
 // import { AppSettings } from './settings/settings.component';
 
 
@@ -31,7 +32,8 @@ import { SmartcontractComponent } from './smartcontract/smartcontract.component'
     PrivatenetworkComponent,
     MiningprivatenetworkComponent,
     NavigationComponent,
-    SmartcontractComponent
+    SmartcontractComponent,
+    SolidityComponent
   ],
   imports: [
     routes,
