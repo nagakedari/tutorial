@@ -21,7 +21,9 @@ export class ChaptersComponent implements OnInit {
         {name : " Creating A Private Network", path : "privatenetwork"},
         {name : " Mining A Private Network", path : "mining"},
         {name : " Understanding Smart Contract", path : "smartcontract"},
-        {name : " Programming with Solidity", path : "solidity"}
+        {name : " Getting Started With Solidity", path : "solidity"},
+        {name : " Variables and Types", path : "variabletypes"},
+        {name : " Payable And Global Message Object", path : "globalobject"}
     ];
   }
 

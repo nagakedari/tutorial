@@ -1,0 +1,64 @@
+<div class="content">
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <br/>
+  <h1> Variables and Types</h1>
+  <p>
+  Solidity is a statically typed language, that is the type of each variable has to be specified during compile time itself. Types can interact with each other in expressions contains operators. In solidity we have three kinds of types.
+</p>
+<ul>
+  <li>Value Types</li>
+  <li>Reference Types</li>
+  <li>Mappings</li>
+</ul>
+<br />
+<h4><b>Value Types</b></h4>
+<br/>
+<p>
+  The following types are called value types, because variables of these types will always be passed by value
+</p>
+<ul>
+  <li><b>Booleans:</b> The possible values are constants <i style="color: orangered">true</i> and <i style="color: orangered">false</i>. Possible operators are !, &amp;&amp;, ||, == and !=.
+  </li>
+  <li><b>Integers:</b> We have signed (int) and unsigned (uint) integers of various sizes. uint8 to unit256 in steps of 8. Possible operators are Comparison(<=, <, ==, !=, >=, >), Bit Operators(&amp;, |,  ^), Arithmetic operators(+,-,*,/,%, <<, >>). 
+  </li>
+  <li><b>Address:</b> Holds a 20 byte value (size of an Ethereum address). Possible operators are <=, <, ==, !=, >= and >. Address types also have members and serve as a base for all contracts. balance member is used to query the balance of an address. Using transfer member we can transfer funds.
+  </li>
+  <li><b>Fixed-size byte arrays:</b> We will have bytes1 .. bytes32. Possible operators are Comparison(<=, <, ==, !=, >=, >), Bit Operators(&amp;, |,  ^), Index access(If x is of type bytesI, then x[k] for 0 <= k < I returns the k th byte). This has .length member which gives the fixed length of the byte array.
+  </li>
+  <li><b>Dynamically-sized byte array:</b> bytes is a dynamically-sized byte array. 
+  </li>
+  <li><b>String Literals:</b> String literals are written with either double or single-quotes. 
+  </li>
+  <li><b>Enums:</b> String literals are written with either double or single-quotes. Enums are one way to create a user-defined type in Solidity. They are explicitly convertible to and from all integer types but implicit conversion is not allowed
+  </li>
+</ul>
+<br />
+<h4><b>Reference Types</b></h4><br/>
+<p>
+  These are complext types, that does not fit in 256 bits. Following are the referene types.
+</p>
+<ul>
+  <li><b>Arrays:</b>Arrays can have a compile-time fixed size or they can be dynamic. An array of fixed size k and element type T is written as T[k], an array of dynamic size as T[].
+  </li>
+  <li><b>Structs:</b>Solidity provides a way to define new types in the form of structs. Structs contains other data types. Solidity structs are similar to structs in other object oriented programs like C++.
+      <i><b><pre style="background-color: lightgray">{{'struct account {
+        address accountId;
+        uint balance;
+    }'}}</pre></b></i>
+  </li> 
+</ul>
+<br />
+<h4><b>Mappings</b></h4>
+<br/>
+<p>
+  Mapping types are declared as mapping(_KeyType => _ValueType). Here _KeyType can be almost any type except for a mapping, a dynamically sized array, a contract, an enum and a struct. _ValueType can actually be any type, including mappings. Mappings are more like hash tables. Mappings are only allowed for state variables. 
+</p>
+<br />
+<p>
+  To know more about the types visit <a target="_blank" href="https://solidity.readthedocs.io/en/develop/types.html#value-types">Solidity Types</a>
+</p>
+<br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+</div>
+

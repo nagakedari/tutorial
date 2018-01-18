@@ -12,6 +12,8 @@ import { PrivatenetworkComponent } from '../privatenetwork/privatenetwork.compon
 import { MiningprivatenetworkComponent } from '../miningprivatenetwork/miningprivatenetwork.component';
 import { SmartcontractComponent } from '../smartcontract/smartcontract.component';
 import { SolidityComponent } from '../solidity/solidity.component';
+import { VariabletypesComponent } from '../variabletypes/variabletypes.component';
+import { GlobalobjectComponent } from '../globalobject/globalobject.component';
 
 
 export const router : Routes = [
@@ -25,7 +27,9 @@ export const router : Routes = [
   {path: 'privatenetwork', component: PrivatenetworkComponent },
   {path: 'mining', component: MiningprivatenetworkComponent },
   {path: 'smartcontract', component: SmartcontractComponent },
-  {path: 'solidity', component: SolidityComponent }
+  {path: 'solidity', component: SolidityComponent },
+  {path: 'variabletypes', component: VariabletypesComponent},
+  {path: 'globalobject', component: GlobalobjectComponent}
 ];
 
 export const routes : ModuleWithProviders  = RouterModule.forRoot (router);

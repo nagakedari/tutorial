@@ -11,7 +11,7 @@ export class SolidityComponent implements OnInit {
   previousRoute : any;
   constructor() { 
     this.previousRoute = 'smartcontract';
-    //this.nextRoute = 'solidity';
+    this.nextRoute = 'variabletypes';
   }
 
   ngOnInit() {

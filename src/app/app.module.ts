@@ -16,6 +16,8 @@ import { MiningprivatenetworkComponent } from './miningprivatenetwork/miningpriv
 import { NavigationComponent } from './navigation/navigation.component';
 import { SmartcontractComponent } from './smartcontract/smartcontract.component';
 import { SolidityComponent } from './solidity/solidity.component';
+import { VariabletypesComponent } from './variabletypes/variabletypes.component';
+import { GlobalobjectComponent } from './globalobject/globalobject.component';
 // import { AppSettings } from './settings/settings.component';
 
 
@@ -33,7 +35,9 @@ import { SolidityComponent } from './solidity/solidity.component';
     MiningprivatenetworkComponent,
     NavigationComponent,
     SmartcontractComponent,
-    SolidityComponent
+    SolidityComponent,
+    VariabletypesComponent,
+    GlobalobjectComponent
   ],
   imports: [
     routes,

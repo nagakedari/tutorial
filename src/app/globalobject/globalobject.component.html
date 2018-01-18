@@ -1,0 +1,57 @@
+<div class="content">
+  <h1>Payable And Global Message Object</h1>
+  <p>
+    Try passing some ether to the sample contract we created in getting started with solidity section by using the value field in Run tab. When you try to create a contract, you will get an error. In order to pass ehter, your contract has to be a payable. Change the earlier contract to below and try running it now. You shouldn't get any error and the contract should get created without any errors which means you have successfully funded the account with ether amount you have configured.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+
+contract SampleContract{
+    uint value;
+    
+    function SampleContract() payable{
+        value = 10;
+    }
+    
+    function getValue()constant returns (uint){
+        return value;
+    }
+    function setValue(uint newValue){
+        value = newValue;
+    }
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+    If you wanted to know the balance of the account, you can create a function which returns the balance by calling <b style="color: orangered">balance</b> member on <b>this</b> object. <b>this</b> returns the contract object.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+
+contract SampleContract{
+    uint value;
+    
+    function SampleContract() payable{
+        value = 10;
+    }
+    
+    function getValue()constant returns (uint){
+        return value;
+    }
+    function setValue(uint newValue){
+        value = newValue;
+    }
+    function getAccountBalance() constant returns (unit){
+      return this.balance;
+    }
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+    There is another global object called <b>msg</b>.
+</div>
+
