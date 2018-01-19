@@ -1,7 +1,12 @@
 <div class="content">
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <br/>
   <h1>Payable And Global Message Object</h1>
+  <br />
+  <h4><b>Payable</b></h4>
   <p>
-    Try passing some ether to the sample contract we created in getting started with solidity section by using the value field in Run tab. When you try to create a contract, you will get an error. In order to pass ehter, your contract has to be a payable. Change the earlier contract to below and try running it now. You shouldn't get any error and the contract should get created without any errors which means you have successfully funded the account with ether amount you have configured.
+    Let's pass some ether to the sample contract we created in getting started with solidity section by using the value field in Run tab. When you try to create a contract, you will get an error. In order to pass ehter, your contract constructor has to be a payable. Change the earlier contract to below and the contract should get created without any errors which means you have successfully funded the account with the ether amount you have configured.
   </p>
   <p>
    <i><b><pre style="background-color: lightgray">{{
@@ -51,7 +56,173 @@ contract SampleContract{
 }'
      }}</pre></b></i>
   </p>
+  <br />
+  <h4><b>Message Object</b></h4>
   <p>
-    There is another global object called <b>msg</b>.
+    There is another global object called <b>msg</b>. We dont have to pass the msg object to any function. It will be available by default.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+
+contract SampleContract{
+    uint value;
+    address owner;
+    
+    function SampleContract() payable{
+        value = 10;
+        owner = msg.sender;
+    }
+    
+    function getValue()constant returns (uint){
+        return value;
+    }
+    function setValue(uint newValue){
+        if(msg.sender == owner) {
+           value = newValue;         
+        }
+    }
+    function getAccountBalance() constant returns (unit){
+      return this.balance;
+    }
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+    The above contract sets a value only if the contract owner sends the value. We can test this by using the same account for setting the value which is used to create a contract. If we use a different account and try to execute the set function, the contract won't set the value.
+  </p>
+  <p>
+    <img src="../assets/solidity/msg_global_obj_contract_creation.jpg" style="width: 30%;"> <img src="../assets/solidity/msg_global_obj_same_account.jpg" style="width: 30%;"> <img src="../assets/solidity/msg_global_obj_different_account.jpg" style="width: 30%;">
+  </p>
+  <br />
+  <h4><b>Killing a Contract</b></h4>
+  <p>
+    So far, we learned how to create a solidity contract and run it. Let's see how we can stop a contract explicitly.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+
+contract SampleContract{
+    uint value;
+    address owner;
+    
+    function SampleContract() payable{
+        value = 10;
+        owner = msg.sender;
+    }
+    
+    function getValue()constant returns (uint){
+        return value;
+    }
+    function setValue(uint newValue){
+        if(msg.sender == owner) {
+           value = newValue;         
+        }
+    }
+    function getAccountBalance() constant returns (unit){
+      return this.balance;
+    }
+
+    function stop(){
+        if(owner == msg.sender){
+            suicide(owner);
+        } else {
+            throw;
+        } 
+    }
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+      <b>suicide</b> function kills the running contract.If you click stop function in remix run tab by using the same account that you have used to create the contract then the contract stops running.
+  </p>
+  <br/>
+  <h4><b>Modifier</b></h4>
+  <p>
+      In the above contract, we have the same logic (if(owner == msg.sender)) in multiple places. We can use <b>modifier</b> to avoid such duplicate code. Following is the modifier syntax.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'modifier ifOwner() {
+         if(owner == msg.sender){
+             _;
+         } else {
+             throw;
+         }
+     }'
+     }}</pre></b></i>
+  </p>
+  <p>
+      The modifier will have control logic which can be applied to multiple places. <b>_;</b> is a place holder code that gets replaced with function code to which the modifier is applied.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+
+contract SampleContract{
+    uint value;
+    address owner;
+
+    modifier ifOwner() {
+         if(owner == msg.sender){
+             _;
+         } else {
+             throw;
+         }
+     }
+    
+    function SampleContract() payable{
+        value = 10;
+        owner = msg.sender;
+    }
+    
+    function getValue()constant returns (uint){
+        return value;
+    }
+    function setValue(uint newValue) ifOwner{
+        value = newValue; 
+    }
+    function getAccountBalance() constant returns (unit){
+      return this.balance;
+    }
+
+    function stop() ifOwner{
+        suicide(owner);
+    }
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+      The modifier <b>ifOwner</b> is applied to setValue and stop functions. During runtime, the place holder (_;) in modifer will be replaced with setValue and stop functions code.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'function setValue(uint newValue) {
+          if(owner == msg.sender){
+             value = newValue;
+         } else {
+             throw;
+         } 
+    }
+    function stop() {
+        if(owner == msg.sender){
+             suicide(owner);
+         } else {
+             throw;
+         }  
+    }'
+     }}</pre></b></i>
+  </p>
+  <p>
+      In next section, we will learn how we can further separate the common code by using contract <b>Inheritance</b>.
+  </p>
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
 </div>
 

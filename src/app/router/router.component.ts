@@ -14,7 +14,7 @@ import { SmartcontractComponent } from '../smartcontract/smartcontract.component
 import { SolidityComponent } from '../solidity/solidity.component';
 import { VariabletypesComponent } from '../variabletypes/variabletypes.component';
 import { GlobalobjectComponent } from '../globalobject/globalobject.component';
-
+import { InheritanceComponent } from '../inheritance/inheritance.component';
 
 export const router : Routes = [
   {path: '', redirectTo: 'intro', pathMatch: 'full' },
@@ -29,7 +29,8 @@ export const router : Routes = [
   {path: 'smartcontract', component: SmartcontractComponent },
   {path: 'solidity', component: SolidityComponent },
   {path: 'variabletypes', component: VariabletypesComponent},
-  {path: 'globalobject', component: GlobalobjectComponent}
+  {path: 'globalobject', component: GlobalobjectComponent},
+  {path: 'inheritance', component: InheritanceComponent}
 ];
 
 export const routes : ModuleWithProviders  = RouterModule.forRoot (router);

@@ -18,6 +18,7 @@ import { SmartcontractComponent } from './smartcontract/smartcontract.component'
 import { SolidityComponent } from './solidity/solidity.component';
 import { VariabletypesComponent } from './variabletypes/variabletypes.component';
 import { GlobalobjectComponent } from './globalobject/globalobject.component';
+import { InheritanceComponent } from './inheritance/inheritance.component';
 // import { AppSettings } from './settings/settings.component';
 
 
@@ -37,7 +38,8 @@ import { GlobalobjectComponent } from './globalobject/globalobject.component';
     SmartcontractComponent,
     SolidityComponent,
     VariabletypesComponent,
-    GlobalobjectComponent
+    GlobalobjectComponent,
+    InheritanceComponent
   ],
   imports: [
     routes,

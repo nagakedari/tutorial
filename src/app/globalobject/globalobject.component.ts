@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GlobalobjectComponent implements OnInit {
 
-  constructor() { }
+   nextRoute : any;
+  previousRoute : any;
+  constructor() { 
+    this.previousRoute = 'variabletypes';
+    this.nextRoute = 'inheritance';
+  }
 
   ngOnInit() {
   }

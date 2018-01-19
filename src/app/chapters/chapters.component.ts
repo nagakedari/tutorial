@@ -15,7 +15,7 @@ export class ChaptersComponent implements OnInit {
         {name : " Introduction", path : "intro"},
         {name : " What is Blockchain", path : "blockchain"},
         {name : " Ethereum EcoSystem", path : "eco"},
-        {name : " How it works?", path : "howitworks"},
+        {name : " How Geth works?", path : "howitworks"},
         {name : " Working with GETH", path : "geth"},
         {name : " Types Of Blockchain and Networks", path : "typesofblockchain"},
         {name : " Creating A Private Network", path : "privatenetwork"},
@@ -23,7 +23,8 @@ export class ChaptersComponent implements OnInit {
         {name : " Understanding Smart Contract", path : "smartcontract"},
         {name : " Getting Started With Solidity", path : "solidity"},
         {name : " Variables and Types", path : "variabletypes"},
-        {name : " Payable And Global Message Object", path : "globalobject"}
+        {name : " Payable And Global Message Object", path : "globalobject"},
+        {name : " Inheritance In Solidity", path : "inheritance"}
     ];
   }
 
