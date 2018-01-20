@@ -1,7 +1,119 @@
 <div class="content">
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <br/>
   <h1>Inheritance in Solidity</h1>
   <p>
-  inheritence works!
+  When you create a complex smart contract, we will end up having lot of contract files and each has to talk to one another. In previous section, The contract we wrote has modifier, setting owner as sender and stopping the contract code. 
 </p>
+<p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+
+contract SampleContract{
+    uint value;
+    address owner;
+
+    modifier ifOwner() {
+         if(owner == msg.sender){
+             _;
+         } else {
+             throw;
+         }
+     }
+    
+    function SampleContract() payable{
+        value = 10;
+        owner = msg.sender;
+    }
+    
+    function getValue()constant returns (uint){
+        return value;
+    }
+    function setValue(uint newValue) ifOwner{
+        value = newValue; 
+    }
+    function getAccountBalance() constant returns (unit){
+      return this.balance;
+    }
+
+    function stop() ifOwner{
+        suicide(owner);
+    }
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+    We might need same modifier and contract killing code in other the contract files as well. So instead of having the smae code in all other contracts, we can have a seperate contract which will have the common code and the actual contract can inherite those common capabilities just by extending it.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+
+contract BaseContract {
+       address owner;
+
+      modifier ifOwner() {
+          if(owner == msg.sender){
+              _;
+          } else {
+              throw;
+          }
+      }
+      function stop() ifOwner{
+        suicide(owner);
+      }
+    }     
+
+contract SampleContract is BaseContract{
+    uint value;
+    function SampleContract() payable{
+        value = 10;
+    }
+    
+    function getValue()constant returns (uint){
+        return value;
+    }
+    function setValue(uint newValue) ifOwner{
+        value = newValue; 
+    }
+    function getAccountBalance() constant returns (unit){
+      return this.balance;
+    }
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+    We can move the <b>BaseContract</b> to it's own file and we can import it in to <b>SampleContract</b>.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+import "./Base.sol";
+
+contract SampleContract is BaseContract{
+    uint value;
+    function SampleContract() payable{
+        value = 10;
+    }
+    
+    function getValue()constant returns (uint){
+        return value;
+    }
+    function setValue(uint newValue) ifOwner{
+        value = newValue; 
+    }
+    function getAccountBalance() constant returns (unit){
+      return this.balance;
+    }
+}'
+     }}</pre></b></i>
+  </p>
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <br/>
 </div>
 
