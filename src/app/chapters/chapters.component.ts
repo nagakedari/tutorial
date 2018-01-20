@@ -24,7 +24,9 @@ export class ChaptersComponent implements OnInit {
         {name : " Getting Started With Solidity", path : "solidity"},
         {name : " Variables and Types", path : "variabletypes"},
         {name : " Payable And Global Message Object", path : "globalobject"},
-        {name : " Inheritance In Solidity", path : "inheritance"}
+        {name : " Inheritance In Solidity", path : "inheritance"},
+        {name : " Creating A Decentralized Wallet", path : "wallet"},
+        {name : " Events In Solidity", path : "events"}
     ];
   }
 

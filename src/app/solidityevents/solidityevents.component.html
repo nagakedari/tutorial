@@ -1,0 +1,69 @@
+<div class="content">
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <br/>
+  <h1>Events In Solidity</h1>
+  <p>
+    We can log events in solidity contract. These logged events can be read from javascript applications using web3.js. Let's create and log some events in the contract wallet we created in last section.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+import "./Base.sol";
+
+contract SampleWallet is BaseContract{
+  
+    struct Permission{
+      bool isAllowed;
+      uint maxTransferAllowed;
+    }
+
+    mapping(address=>Permission) allowedAddresses;
+    
+    event logWalletEvents(address sender, address reciever, uint amount);
+    
+    function addWhoCanSendEhter(address permittedAddress, uint maxTransferAmount){
+        allowedAddresses[permittedAddress] = Permission(true, maxTransferAmount);
+        logWalletEvents(msg.sender, permittedAddress, maxTransferAmount);
+    }
+    
+    function sendEther(address recieverAddress, uint amountInWei) ifOwner{
+        if(allowedAddresses[msg.sender].isAllowed){
+            if(amountInWei<=allowedAddresses[msg.sender].maxTransferAllowed){
+                bool isTransferSuccessful = recieverAddress.send(amountInWei);
+                if (isTransferSuccessful){
+                    logWalletEvents(msg.sender, recieverAddress, amountInWei);
+                } else {
+                    throw;
+                }
+            }else {
+                throw;
+            }
+        } else {
+            throw;
+        }
+    }
+    
+    function getBalanceEther () constant returns (uint){
+        return this.balance;
+    }
+    
+    function () payable{
+        
+    } 
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+    When you add an address to allowedAddresses by calling addWhoCanSendEhter function, an event gets locked with the wallet owner address, the address that gets added to allowed address list and the maximum amount that the address can transfer.
+  </p>
+  <p>
+    <img src="../assets/solidity/solidity_event_logging.jpg" style="width:100%">
+  </p>
+  <p>
+    Similarly, we are logging an event when we send an ether to another account. This event will log sender, receiver and the amount transferred details. In next sections, we will learn how we can read the events from javascript applications using web3.js
+  </p>
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+</div>

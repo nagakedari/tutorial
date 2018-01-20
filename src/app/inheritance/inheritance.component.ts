@@ -11,7 +11,7 @@ export class InheritanceComponent implements OnInit {
   previousRoute : any;
   constructor() { 
     this.previousRoute = 'globalobject';
-    //this.nextRoute = 'inheritance';
+    this.nextRoute = 'wallet';
   }
 
   ngOnInit() {

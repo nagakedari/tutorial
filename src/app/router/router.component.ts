@@ -15,6 +15,8 @@ import { SolidityComponent } from '../solidity/solidity.component';
 import { VariabletypesComponent } from '../variabletypes/variabletypes.component';
 import { GlobalobjectComponent } from '../globalobject/globalobject.component';
 import { InheritanceComponent } from '../inheritance/inheritance.component';
+import { ContractwalletComponent } from '../contractwallet/contractwallet.component';
+import { SolidityeventsComponent } from '../solidityevents/solidityevents.component';
 
 export const router : Routes = [
   {path: '', redirectTo: 'intro', pathMatch: 'full' },
@@ -30,7 +32,10 @@ export const router : Routes = [
   {path: 'solidity', component: SolidityComponent },
   {path: 'variabletypes', component: VariabletypesComponent},
   {path: 'globalobject', component: GlobalobjectComponent},
-  {path: 'inheritance', component: InheritanceComponent}
+  {path: 'inheritance', component: InheritanceComponent},
+  {path: 'wallet', component: ContractwalletComponent},
+  {path: 'events', component: SolidityeventsComponent}
+
 ];
 
 export const routes : ModuleWithProviders  = RouterModule.forRoot (router);

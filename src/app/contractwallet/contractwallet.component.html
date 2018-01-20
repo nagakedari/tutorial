@@ -1,0 +1,74 @@
+<div class="content">
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <br/>
+  <h1>Creating A Decentralized Wallet</h1>
+  <p>
+    Contract wallets are used for sending, recieving and storing the ether. Wallets are controlled by the software program. On the other hand, Accounts are also used to store the ether but using a wallet will gives us more felxibility. Accounts cannot be controlled by programs. Accounts claims the ownership of wallets. Let's create a sample wallet using solidity, which has a rule that only the owner of the wallet can transfer funds to another account.
+  </p>
+  <p>
+   <i><b><pre style="background-color: lightgray">{{
+     
+     'pragma solidity ^0.4.0;
+import "./Base.sol";
+
+contract SampleWallet is BaseContract{
+  
+    struct Permission{
+      bool isAllowed;
+      uint maxTransferAllowed;
+    }
+
+    mapping(address=>Permission) allowedAddresses;
+    
+    function addWhoCanSendEhter(address permittedAddress, uint maxTransferAmount){
+        allowedAddresses[permittedAddress] = Permission(true, maxTransferAmount);
+    }
+    
+    function sendEther(address recieverAddress, uint amountInWei) ifOwner{
+        if(allowedAddresses[msg.sender].isAllowed){
+            if(amountInWei<=allowedAddresses[msg.sender].maxTransferAllowed){
+                bool isTransferSuccessful = recieverAddress.send(amountInWei);
+                if (!isTransferSuccessful){
+                    throw;
+                }
+            }else {
+                throw;
+            }
+        } else {
+            throw;
+        }
+    }
+    
+    function getBalanceEther () constant returns (uint){
+        return this.balance;
+    }
+    
+    function () payable{
+        
+    } 
+}'
+     }}</pre></b></i>
+  </p>
+  <p>
+    The function <b>addWhoCanSendEhter</b> will add the allowed users who can send the ehter, in this case only the owner of the wallet can send. <b>sendEther</b> will actually transfers the funds from the wallet to some other account. To test, go to Run tab in remix and put some ether in value field and create the contract. The account <b>0xca35b7d915458ef540ade6068dfe2f44e8fa733c</b> is the owner of the wallet. It has the balance of 80 (the ether we configured in value field)
+  </p>
+  <p>
+    <img src="../assets/solidity/contract_wallet_send_ether.jpg" class="center">
+  </p>
+  <p>
+    If you try to invoke sendEther function by passing the reciever account(0x14723a09acff6d2a60dcdf7aa4aff308fddc160c) and some ether amount, The contract throws an error becacuase we haven't added the owner to allowed addresses.
+  </p>
+  <p>
+    <img src="../assets/solidity/contract_wallet_send_ether_without_adding_owner.jpg" style="width:100%">
+  </p>
+  <p>
+    Let's first add the owner to allowed addresses by calling the function addWhoCanSendEhter and try to send some ether. Finally check the balance of wallet to see if reflects the transfer.
+  </p>
+  <p>
+    <img src="../assets/solidity/contract_wallet_send_ether_sucessful.jpg" class="center">
+  </p>
+  <br/>
+  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+</div>
+
