@@ -1,10 +1,7 @@
 <div class="tabbable tabs-left">
-  <ul class="nav nav-tabs navbar-nav">
+  <ul class="nav nav-tabs">
     <li *ngFor="let tab of ethereumTopicTabs; let i= index" routerLinkActive="active-tab" [routerLinkActiveOptions]="{exact:true}">
       <a routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
-        <!--(click)="selectedTab(i)" 
-      [style.backgroundColor]="i==selectedTabIndex?'#3385ff':''"
-      [style.color]="i==selectedTabIndex?'white':''">-->
     </li>
   </ul>
 </div>
