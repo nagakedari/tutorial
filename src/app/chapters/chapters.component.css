@@ -112,3 +112,13 @@
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
 }
+
+/*mat-toolbar, mat-nav-list{
+  height: 43px;
+}*/
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}

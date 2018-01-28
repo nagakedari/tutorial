@@ -1,4 +1,4 @@
-<div class="tabbable tabs-left">
+<!--<div class="tabbable tabs-left">
   <ul class="nav nav-tabs">
     <li *ngFor="let tab of ethereumTopicTabs; let i= index" routerLinkActive="active-tab" [routerLinkActiveOptions]="{exact:true}">
       <a routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
@@ -9,5 +9,18 @@
   <div class="tab-content">
   <router-outlet></router-outlet>
 </div>
-</div>
-
+</div>-->
+<mat-sidenav-container>
+  <mat-sidenav #mainSideNav mode="side" opened>
+    <mat-nav-list *ngFor="let tab of ethereumTopicTabs" routerLinkActive="active-tab" [routerLinkActiveOptions]="{exact:true}">
+      <a mat-list-item mat-ripple routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="mainSideNav.toggle()">
+                <mat-icon *ngIf="mainSideNav.opened">chevron_left</mat-icon>
+                <mat-icon *ngIf="!mainSideNav.opened">menu</mat-icon>
+            </button> Ehtereum
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   inputs: ['next','previous']
 })
 export class NavigationComponent implements OnInit {
-
+next: string;
+previous: string;
   constructor() { }
 
   ngOnInit() {
