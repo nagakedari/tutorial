@@ -1,9 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-.content{
-    text-align: left;
-    padding-left: 130px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    font-family: sans-serif;
+.parent {
+  overflow: hidden;
+}
+
+mat-card img {
+  width: 100%;
+  height: auto;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.noresize {
+    height: auto;
+    max-width: 500px;
+    min-width: 300px;
 }

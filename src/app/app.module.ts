@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MaterialmoduleModule } from './materialmodule/materialmodule.module';
 
 
 import { AppComponent } from './app.component';
@@ -47,7 +48,8 @@ import { SolidityeventsComponent } from './solidityevents/solidityevents.compone
   ],
   imports: [
     routes,
-    BrowserModule
+    BrowserModule,
+    MaterialmoduleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

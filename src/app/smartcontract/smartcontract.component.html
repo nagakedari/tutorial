@@ -1,20 +1,37 @@
-<div class="content">
+<mat-card>
   <h1>Understanding Smart Contract</h1>
   <p>
-  Smart contracts are like contracts in the real world, the only difference is that they are digital. The smart contract is a computer program that sits inside a blockchain and executes when certain condition is met.
+    Smart contracts are like contracts in the real world, the only difference is that they are digital. The smart contract is
+    a computer program that sits inside a blockchain and executes when certain condition is met.
   </p>
   <p>
-    To understand more on how smart contracts works, lets take the example of crowd funding. The product team would go to fund raising tool like kickstarter, create a project, set the fund goal and start collecting the money from the people who believed the idea. Kickstarter is a third-party between the product team and the supporters. Both the product team and supporters should trust Kickstarter to handle the funds correctly. When the funding goal is reached, product team will expect the money from kickstarter. Similarly, support team expects the kickstarter to send money if it reaches the goal or it expects refund if it doesn't meet the goals.
+    To understand more on how smart contracts works, lets take the example of crowd funding. The product team would go to fund
+    raising tool like kickstarter, create a project, set the fund goal and start collecting the money from the people who
+    believed the idea. Kickstarter is a third-party between the product team and the supporters. Both the product team and
+    supporters should trust Kickstarter to handle the funds correctly. When the funding goal is reached, product team will
+    expect the money from kickstarter. Similarly, support team expects the kickstarter to send money if it reaches the goal
+    or it expects refund if it doesn't meet the goals.
   </p>
   <p>
-    We can build a system which doesn't require a third-party in between, by writing a program which holds/delivers funds to appropriate parties when certain conditons are met. For the above mentioned example, Supporters transfer the money to the smart contract, smart contract will hold the money until the project goal is met. Once the project goal is achieved, it then automatially transfers the funds to the product team. If the project fails reach its goals, then the smart contract automatically refund the supporters. In this case both parties should trust smart contract. But unlike the kickstarter, smart contracts are distributed because they run on blockchain. Hence the moeny is not controlled by single entity.
+    We can build a system which doesn't require a third-party in between, by writing a program which holds/delivers funds to
+    appropriate parties when certain conditons are met. For the above mentioned example, Supporters transfer the money to
+    the smart contract, smart contract will hold the money until the project goal is met. Once the project goal is achieved,
+    it then automatially transfers the funds to the product team. If the project fails reach its goals, then the smart contract
+    automatically refund the supporters. In this case both parties should trust smart contract. But unlike the kickstarter,
+    smart contracts are distributed because they run on blockchain. Hence the moeny is not controlled by single entity.
   </p>
   <p>
-    Smart contracts are immutable and distributed. By immutable means, once a contract is created they can never be changed. By distrubuted means, the outcome of a contract will be validated by everyone on the blockchain network. If one member tries to tamper the smartcontract and tries to release the funds, the other nodes in the blockchain would invalidate the transaction. Tampering the smart contracts becomes almost impossible. Smart contracts can be used in several other places like Banks, Insurance etc. There are different blockchains available to build the smart contracts but Ehtereum is the big one.
+    Smart contracts are immutable and distributed. By immutable means, once a contract is created they can never be changed.
+    By distrubuted means, the outcome of a contract will be validated by everyone on the blockchain network. If one member
+    tries to tamper the smartcontract and tries to release the funds, the other nodes in the blockchain would invalidate
+    the transaction. Tampering the smart contracts becomes almost impossible. Smart contracts can be used in several other
+    places like Banks, Insurance etc. There are different blockchains available to build the smart contracts but Ehtereum
+    is the big one.
   </p>
   <p>
-    Ethereum is designed to build smart contracts. In Ethereum, the smart contracts are developed using a special programming language called <b>Solidity</b>.
+    Ethereum is designed to build smart contracts. In Ethereum, the smart contracts are developed using a special programming
+    language called <b>Solidity</b>.
   </p>
   <br />
   <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
-</div>
+</mat-card>

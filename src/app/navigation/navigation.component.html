@@ -1,10 +1,10 @@
 <div class="w3-display-container">
   <div class='w3-display-left'>
-    <button [disabled]="!previous" routerLink="../{{previous}}"  class="w3-btn"
+    <button mat-raised-button [disabled]="!previous" routerLink="../{{previous}}" 
             [ngStyle]="{backgroundColor: previous?'#ccddff' :'gray'}">previous</button>
   </div>
   <div class='w3-display-right'>
-    <button [disabled]="!next" routerLink="../{{next}}" class="w3-btn" 
+    <button mat-raised-button [disabled]="!next" routerLink="../{{next}}" 
             [ngStyle]="{backgroundColor: next?'#3385ff' :'gray' }">next</button>
   </div>
 </div>

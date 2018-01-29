@@ -1,32 +1,53 @@
-<div class="content">
+<mat-card>
   <br/>
   <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
   <br/>
   <h1>What is Blockchain?</h1>
 
-<p>
-  Blockchain is a public ledger of all the  transactions ever occured all the way from the initial transaction. As the name says, its a chain of blocks that holds the data. Once the data is written on block it is highgly impossible to change/tamper the data. Let's understand a block and see why it is impossible to change the data. A block contains data, hash of the block and the hash of a previous block. 
-</p>
-<p>
-    <img src="../assets/blockchain/block.jpg" class="center">
+  <p>
+    Blockchain is a public ledger of all the transactions ever occured all the way from the initial transaction. As the name
+    says, its a chain of blocks that holds the data. Once the data is written on block it is highgly impossible to change/tamper
+    the data. Let's understand a block and see why it is impossible to change the data. A block contains data, hash of the
+    block and the hash of a previous block.
   </p>
   <p>
-  The data that a block contains depends on the type of blockchain. In ehtereum, the data would be a smart contract. In bitcoin, the data will be transactional data between sender and reciever. The hash in the block is used to identify the block. Whenever a block gets created, a new hash will be calculated. Similarly if we make some changes to the existing block, the hash value will be re-calculated. The third content that a block has is the hash code for previous block, which makes it a chain. The very first block which is also called as genesis block will have the previous block as empty.
-</p>
-<p>
+    <img src="../assets/blockchain/block.jpg" class="center noresize">
+  </p>
+  <p>
+    The data that a block contains depends on the type of blockchain. In ehtereum, the data would be a smart contract. In bitcoin,
+    the data will be transactional data between sender and reciever. The hash in the block is used to identify the block.
+    Whenever a block gets created, a new hash will be calculated. Similarly if we make some changes to the existing block,
+    the hash value will be re-calculated. The third content that a block has is the hash code for previous block, which makes
+    it a chain. The very first block which is also called as genesis block will have the previous block as empty.
+  </p>
+  <p>
     <img src="../assets/blockchain/blockchain.jpg" class="center">
   </p>
-<p>
-  Blockchain  constantly grows as new blocks are added. The transactions that are added on to the network are being processed by the computers connected to the nework. These computers are referred as Nodes. These nodes are scattered through out the world, hence its a decentralized technology. Any new block added to the chain turns out in to chronological order. Anything that happens on the network happens as a whole. 
-</p>
-<p>
-  Let's say hypothetically, if we tampered the second block (hashcode: 1RT5) in the above diagram, The hash of that block changes and subsequent blocks becomes invalid because they no longer store the previous block hash. So changing a single block makes all the following blocks in valid. But hash code alone is not sufficient to make the blockchain secure. Because we can tamper a block and recalculate all the subsequent blocks to make the block chain valid again. To prevent this, blockchain has something called <b>Proof-Of-Work</b>. It's a mechanism that slows down the creation of new blocks. This makes very hard to tamper the data, because if you tamper one block you will have to re-calculate the proof-of-work for all the subsequent blocks. So the security of blockchain comes from both the hash code and the mechanism of proof-of-work. 
-</p>
-<p>
-  Since blockchain is decentralized, any new block created should be verified by all nodes in the network. All nodes in the network will have exactly the same blockchain data. Whenever a new block is created, it gets copied to each node. Each node then verifies it and approves it consenting with all other nodes. Tampered nodes will be rejected by the network. So to sum up, If someone wants to tamper a block, they have to recalculate the hash codes and proof-of-work for all the following blocks and take control of more than 50% of the nodes which is almost impossible.
-<p>
-  The blockchain is designed for longevity and durability. Its not maintained by a single entity. All the nodes that are participated in a network are part of one community. Hence it has no single point of failure. 
-</p>
-  <br/>
-  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
-</div>
+  <p>
+    Blockchain constantly grows as new blocks are added. The transactions that are added on to the network are being processed
+    by the computers connected to the nework. These computers are referred as Nodes. These nodes are scattered through out
+    the world, hence its a decentralized technology. Any new block added to the chain turns out in to chronological order.
+    Anything that happens on the network happens as a whole.
+  </p>
+  <p>
+    Let's say hypothetically, if we tampered the second block (hashcode: 1RT5) in the above diagram, The hash of that block changes
+    and subsequent blocks becomes invalid because they no longer store the previous block hash. So changing a single block
+    makes all the following blocks in valid. But hash code alone is not sufficient to make the blockchain secure. Because
+    we can tamper a block and recalculate all the subsequent blocks to make the block chain valid again. To prevent this,
+    blockchain has something called <b>Proof-Of-Work</b>. It's a mechanism that slows down the creation of new blocks.
+    This makes very hard to tamper the data, because if you tamper one block you will have to re-calculate the proof-of-work
+    for all the subsequent blocks. So the security of blockchain comes from both the hash code and the mechanism of proof-of-work.
+  </p>
+  <p>
+    Since blockchain is decentralized, any new block created should be verified by all nodes in the network. All nodes in the
+    network will have exactly the same blockchain data. Whenever a new block is created, it gets copied to each node. Each
+    node then verifies it and approves it consenting with all other nodes. Tampered nodes will be rejected by the network.
+    So to sum up, If someone wants to tamper a block, they have to recalculate the hash codes and proof-of-work for all the
+    following blocks and take control of more than 50% of the nodes which is almost impossible.
+    <p>
+      The blockchain is designed for longevity and durability. Its not maintained by a single entity. All the nodes that are participated
+      in a network are part of one community. Hence it has no single point of failure.
+    </p>
+    <br/>
+    <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+</mat-card>
