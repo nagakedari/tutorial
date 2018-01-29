@@ -54,19 +54,19 @@ contract SampleWallet is BaseContract{
     The function <b>addWhoCanSendEhter</b> will add the allowed users who can send the ehter, in this case only the owner of the wallet can send. <b>sendEther</b> will actually transfers the funds from the wallet to some other account. To test, go to Run tab in remix and put some ether in value field and create the contract. The account <b>0xca35b7d915458ef540ade6068dfe2f44e8fa733c</b> is the owner of the wallet. It has the balance of 80 (the ether we configured in value field)
   </p>
   <p>
-    <img src="../assets/solidity/contract_wallet_send_ether.jpg" class="center">
+    <img src="../assets/solidity/contract_wallet_send_ether.jpg" class="center noresize">
   </p>
   <p>
     If you try to invoke sendEther function by passing the reciever account(0x14723a09acff6d2a60dcdf7aa4aff308fddc160c) and some ether amount, The contract throws an error becacuase we haven't added the owner to allowed addresses.
   </p>
   <p>
-    <img src="../assets/solidity/contract_wallet_send_ether_without_adding_owner.jpg" style="width:100%">
+    <img src="../assets/solidity/contract_wallet_send_ether_without_adding_owner.jpg">
   </p>
   <p>
     Let's first add the owner to allowed addresses by calling the function addWhoCanSendEhter and try to send some ether. Finally check the balance of wallet to see if reflects the transfer.
   </p>
   <p>
-    <img src="../assets/solidity/contract_wallet_send_ether_sucessful.jpg" class="center">
+    <img src="../assets/solidity/contract_wallet_send_ether_sucessful.jpg" class="center noresize">
   </p>
   <br/>
   <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>

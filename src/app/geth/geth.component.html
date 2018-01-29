@@ -53,12 +53,12 @@
     that you are connected to Main network. The chain ids 1,2,3 are reserved for Main and test networks. Which means if you
     wanted to create a private network you can use any number except these.
   </p>
-  <p><img src="../assets/geth/geth_chain_id_log.jpg"></p>
+  <img src="../assets/geth/geth_chain_id_log.jpg">
   <p>
     The last important log is <b>IPC end point opened</b>. In windows, the IPC end point is a pipe <b><i>\\.\pipe\geth.ipc</i></b>    for linux and mac its a file. Since we started the geth without any parameters, by default, it opens IPC not Http-rpc.
     In otherwords, if you have an application which uses web3.js to connect via http-rpc, it won't work.
   </p>
-  <p><img src="../assets/geth/geth_ipc_end_point.jpg"></p>
+  <img src="../assets/geth/geth_ipc_end_point.jpg">
 
   <br />
   <p>
@@ -71,13 +71,13 @@
     While geth is running, open another powershell (for Windows OS only) and run <b><i>geth attach</i></b> command. For linux
     or mac you need to specify the location of IPC file. So for linux or mac the command will be <b><i>geth attach 'IPC_file_Path'</i></b>
   </p>
-  <p><img src="../assets/geth/geth_attach.jpg"></p>
+  <img src="../assets/geth/geth_attach.jpg">
   <p>
     Now that we are connected to geth, lets issue javascript commands to json api. For example, to create a new account issue
     personal,newAccount(); command. The json api will create an account which gets stored under ethereum home directory/keystore.
     The format of the generated key would be: UTC -- 'Time Stamp of key generation'--'key'
   </p>
-  <p><img src="../assets/geth/create_new_account_command.jpg"></p>
+  <img src="../assets/geth/create_new_account_command.jpg">
   <p> If you want learn more about API, visit <a href="https://github.com/ethereum/go-ethereum/wiki/Management-APIs" target="_blank">Ethereum Management API</a>    and <a href="https://github.com/ethereum/wiki/wiki/JSON-RPC" target="_blank">Json-RPC Server</a>
   </p>
   <br/>

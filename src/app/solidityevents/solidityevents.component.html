@@ -1,6 +1,6 @@
 <mat-card>
   <br/>
-  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <app-navigation [previous]="previousRoute"></app-navigation>
   <br/>
   <h1>Events In Solidity</h1>
   <p>
@@ -59,11 +59,11 @@ contract SampleWallet is BaseContract{
     When you add an address to allowedAddresses by calling addWhoCanSendEhter function, an event gets locked with the wallet owner address, the address that gets added to allowed address list and the maximum amount that the address can transfer.
   </p>
   <p>
-    <img src="../assets/solidity/solidity_event_logging.jpg" style="width:100%">
+    <img src="../assets/solidity/solidity_event_logging.jpg">
   </p>
   <p>
     Similarly, we are logging an event when we send an ether to another account. This event will log sender, receiver and the amount transferred details. In next sections, we will learn how we can read the events from javascript applications using web3.js
   </p>
   <br/>
-  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+  <app-navigation [previous]="previousRoute"></app-navigation>
 </mat-card>

@@ -1,17 +1,8 @@
-<!--<div class="tabbable tabs-left">
-  <ul class="nav nav-tabs">
-    <li *ngFor="let tab of ethereumTopicTabs; let i= index" routerLinkActive="active-tab" [routerLinkActiveOptions]="{exact:true}">
-      <a routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
-    </li>
-  </ul>
-</div>
-<div class="container">
-  <div class="tab-content">
-  <router-outlet></router-outlet>
-</div>
-</div>-->
+<mat-toolbar class="header-toolbar">
+  <span style="color:blue"><b>Ehtereum</b><small>blockchaintutorial.com</small></span>
+</mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav #mainSideNav mode="side" opened>
+  <mat-sidenav #mainSideNav mode="side" closed>
     <mat-nav-list *ngFor="let tab of ethereumTopicTabs" routerLinkActive="active-tab" [routerLinkActiveOptions]="{exact:true}">
       <a mat-list-item mat-ripple routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
     </mat-nav-list>
