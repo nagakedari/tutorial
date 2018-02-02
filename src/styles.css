@@ -20,3 +20,8 @@ img.center {
     max-width: 500px;
     min-width: 300px;
 }
+
+pre {
+    /*white-space: pre-wrap;*/
+    overflow: auto;
+}
