@@ -19,7 +19,7 @@ import { ContractwalletComponent } from '../contractwallet/contractwallet.compon
 import { SolidityeventsComponent } from '../solidityevents/solidityevents.component';
 
 export const router : Routes = [
-  {path: '', redirectTo: 'intro', pathMatch: 'full' },
+  {path: '', component: IntroductionComponent, pathMatch: 'full' },
   {path: 'intro', component: IntroductionComponent },
   {path: 'eco', component: EcosystemComponent },
   {path: 'blockchain', component: BlockchainComponent },
