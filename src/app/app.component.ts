@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ChaptersComponent} from './chapters/chapters.component';
+// import { ChaptersComponent} from './/chapters/chapters.component';
 
 @Component({
   selector: 'app-root',

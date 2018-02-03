@@ -10,3 +10,7 @@
 .header-toolbar{
   height: 33px;
 }
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
