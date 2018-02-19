@@ -10,7 +10,7 @@ export class SolidityComponent implements OnInit {
   nextRoute : any;
   previousRoute : any;
   constructor() { 
-    this.previousRoute = 'smartcontract';
+    this.previousRoute = 'privatenetwork';
     this.nextRoute = 'variabletypes';
   }
 

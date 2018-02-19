@@ -1,10 +1,16 @@
 <div class="w3-display-container">
   <div class='w3-display-left'>
-    <button mat-raised-button [disabled]="!previous" routerLink="../{{previous}}" 
-            [ngStyle]="{backgroundColor: previous?'#ccddff' :'gray'}">previous</button>
+    <button mat-raised-button routerLink="../{{previous}}" 
+            [ngStyle]="{backgroundColor: previous?'#ccddff' :'gray'}" *ngIf="previous">previous</button>
   </div>
   <div class='w3-display-right'>
-    <button mat-raised-button [disabled]="!next" routerLink="../{{next}}" 
-            [ngStyle]="{backgroundColor: next?'#3385ff' :'gray' }">next</button>
+    <button mat-raised-button routerLink="../{{next}}" 
+            [ngStyle]="{backgroundColor: next?'#3385ff' :'gray' }" *ngIf="next">next</button>
   </div>
 </div>
+<!--<mat-toolbar class="header-toolbar">
+  <button mat-raised-button routerLink="../{{previous}}" 
+            [ngStyle]="{backgroundColor: previous?'#ccddff' :'gray'}" *ngIf="previous">previous</button>
+   <button mat-raised-button routerLink="../{{next}}" 
+            [ngStyle]="{backgroundColor: next?'#3385ff' :'gray' }" *ngIf="next">next</button>          
+</mat-toolbar>-->

@@ -1,18 +1,28 @@
-<mat-toolbar class="header-toolbar">
-  <span class="fill-remaining-space"></span>
-  <span style="color:blue"><b>Ehtereum</b><small>blockchaintutorial.com</small></span>
-</mat-toolbar>
+<!--<mat-toolbar class="header-toolbar"> 
+</mat-toolbar>-->
 <mat-sidenav-container>
   <mat-sidenav #mainSideNav mode="side" closed>
     <mat-nav-list *ngFor="let tab of ethereumTopicTabs" routerLinkActive="active-tab" [routerLinkActiveOptions]="{exact:true}">
-      <a mat-list-item mat-ripple routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
+      <mat-expansion-panel *ngIf="tab.subItems">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{tab.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <a (click)="mainSideNav.opened= !mainSideNav.opened" *ngFor="let subitem of tab.subItems" mat-list-item mat-ripple routerLink="{{subitem.path}}"
+          data-toggle="tab">{{subitem.name}}</a>
+      </mat-expansion-panel>
+      <a (click)="mainSideNav.opened= !mainSideNav.opened" routerLinkActive="active-tab" [routerLinkActiveOptions]="{exact:true}"
+        *ngIf="!tab.subItems" mat-list-item mat-ripple routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-toolbar color="primary">
     <button mat-icon-button (click)="mainSideNav.toggle()">
-                <mat-icon *ngIf="mainSideNav.opened">chevron_left</mat-icon>
-                <mat-icon *ngIf="!mainSideNav.opened">menu</mat-icon>
-            </button>
+      <mat-icon *ngIf="mainSideNav.opened">chevron_left</mat-icon>
+      <mat-icon *ngIf="!mainSideNav.opened">menu</mat-icon>
+    </button>
+    <span class="fill-remaining-space"></span>
+    <span><b>Ethereum</b><small>blockchaintutorial.com</small></span>
   </mat-toolbar>
   <router-outlet></router-outlet>
 </mat-sidenav-container>

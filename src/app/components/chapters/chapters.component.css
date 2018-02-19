@@ -1,16 +1,20 @@
-.active-tab{
+/*.active-tab> mat-expansion-panel-header > a{
   background-color: #3385ff;
+  color: white;
   
+}*/
+
+.active-tab > mat-expansion-panel > mat-expansion-panel-header,
+.active-tab > mat-expansion-panel > mat-expansion-panel-header > mat-panel-title{
+background-color: #3385ff;
+  color: white;
 }
 
 .active-tab > a {
+  background-color: #3385ff;
   color: white;
 }
 
 .header-toolbar{
   height: 33px;
-}
-
-.fill-remaining-space {
-  flex: 1 1 auto;
 }

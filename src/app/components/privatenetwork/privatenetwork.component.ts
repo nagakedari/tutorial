@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PrivatenetworkComponent implements OnInit {
 genesisJson : any = {
                       config : {
-                        chainId : 10,
+                        chainId : 15,
                         homeSteadBlock : 0,
                         eip155Block : 0,
                         eip158Block : 0
@@ -20,7 +20,7 @@ genesisJson : any = {
   nextRoute : any;
 previousRoute : any;
   constructor() { 
-    this.nextRoute = 'mining';
+    this.nextRoute = 'solidity';
     this.previousRoute = 'typesofblockchain';
   }
 

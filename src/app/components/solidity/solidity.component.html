@@ -4,51 +4,76 @@
   <br/>
   <h1>Getting Started With Solidity</h1>
   <p>
-   Solidity is a high level programming language which is used to build smart contracts. A contract in solidity looks like this.
+    Solidity is a contract-oriented, high-level language for implementing smart contracts. It was influenced by C++, Python and
+    JavaScript and is designed to target the Ethereum Virtual Machine (EVM). Solidity is statically typed, supports inheritance,
+    libraries and complex user-defined types among other features. A contract in solidity looks like this.
   </p>
   <p>
-   <i><b><pre style="background-color: lightgray">{{
-     
-     'pragma solidity ^0.4.0;
+    <i><b><pre style="background-color: lightgray">{{ 
+      'pragma solidity ^0.4.0; 
+  contract SampleContract{ 
+    uint value; 
 
-contract SampleContract{
-    uint value;
-    
-    function SampleContract(){
-        value = 10;
-    }
-    
-    function getValue()constant returns (uint){
-        return value;
-    }
-    function setValue(uint newValue){
-        value = newValue;
-    }
-}'
-     }}</pre></b></i>
-  </p>
-  <p>
-    The first statement <b style="color: orangered">pragma solidity ^0.4.0</b> tells the version of solidity that will be used to compile. The contract is similar to a class in java/c++, which has variables/properties and functions that operates on those variables. <b>value</b> is a contract variable of type unassigned integer. The <b>function SampleContract()</b> is a constructor of the contract which gets executed first when the contract runs. The function <b>setValue</b> sets the unassigned integer variable to some value. The <b>getValue</b> function returns the value of the contract variable. The getter and setters are more like the getters and setters in other languages (ex: Java). The extension of solidity contract file is <b>.sol</b>
-  </p>
-  <p>
-    We can write, compile and run the solidity programs in Remix which is running on cloud (<a target="_blank" href="http://remix.ethereum.org">Remix</a>). In remix, careate a new file, copy and paste the above code and go to Run tab. You will have Environment, Account, Gas Limit and Value configurable parameters which are used for running a contract. Environment will have 3 options, JavaScript VM will execute the contract using in-memory network. That means it will have the network and blockchain everything avaialable in memory. This is something remix provides and we can use this option for testing the contracts we build in remix. Injected Web3 option will inject the web3 object provided my Mist or Metamask browser plug in and interacts with the network provided by these plugins. Web3 Provider option will try to connect to a node running on a network. For example in earlier sections (Refer Creating private network section), we created a private netwrok and using web3 provider option, we can connect to that network, deploy and run the contract on that private network. The easiest options is to use in-memory network which is Javascript VM. Account is the one associated to your wallet. An account will hold the ethers. Gas Limit is the maximum gas that a transaction sends and value is used to send some ether to the contract.
-  </p>
-  <p>
-    To run the above contract, go to Run tab, select the environement as Javascript VM, select a test account that remix proides, use the default gas limit and click on Create button. Create button will deploy the contract to in-memory network. You can see get and set methods as buttons. If you click on getValue button, it should display the value as 10 which we set in the constructor.
-  </p>
-  <p>
-    <img src="../assets/solidity/sample_contract_getValue.jpg" class="center noresize">
-  </p>
-  <p>
-    You can also set the value by passing some value. Now if you click getValue you will get the updated value. The getValue service has returned the updated value as 15.
-  </p>
-  <p>
-    <img src="../assets/solidity/sample_contract_setValue.jpg" class="center noresize">
-  </p>
-  <p>
-    Solidity program gets compiled into byte code using EVM (Ethereum Virtual Machine). Each instruction costs some gas. If the gas reaches the passed in Gas limit, the contract stops running automatically. The set function or any write instructions costs gas. Since get function is only reading the data from the block chain so it doesn't need the gas. That's why if you noticed the getValue function, we have a keyword constant. If you wanted know more about gas, gas limit, how much gas required for a transaction and executing the contract, please visit the blog <a target="_blank" href="https://vomtom.at/what-exactly-is-the-gas-limit-and-the-gas-price-in-ethereum/">Everything you need to know about Gas</a>
-  </p>
-  <br/>
-  <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
+    function SampleContract(){ 
+      value = 10; 
+     } 
+        
+    function getValue()constant returns (uint){ 
+      return value; 
+    } 
+        
+    function setValue(uint newValue){ 
+      value = newValue; 
+    } 
+  }' }}
+</pre>
+</b>
+</i>
+</p>
+<p>
+  The first statement
+  <b style="color: orangered">pragma solidity ^0.4.0</b> tells the version of solidity that will be used to compile. This is to ensure that the contract does not suddenly behave differently with a new compiler version. 
+  The contract is similar to a class in java/c++, which has variables/properties and functions that operates on those variables. <b>value</b> is a contract variable
+  of type unassigned integer. The <b>function SampleContract()</b> is a constructor of the contract which gets executed first
+  when the contract runs. The function <b>setValue</b> sets the unassigned integer variable to some value. The <b>getValue</b>function returns the value of the contract variable. The getter and setters are more like the getters and setters in other
+  languages (ex: Java). The extension of solidity contract file is <b>.sol</b>
+</p>
+<p>
+  We can write, compile and run the solidity programs in Remix which is running on cloud (<a target="_blank" href="http://remix.ethereum.org">Remix</a>).
+  In remix, careate a new file, copy and paste the above code and go to Run tab. You will have Environment, Account, Gas
+  Limit and Value configurable parameters which are used for running a contract. Environment will have 3 options, JavaScript
+  VM will execute the contract using in-memory network. That means it will have the network and blockchain everything avaialable
+  in memory. This is something remix provides and we can use this option for testing the contracts we build in remix. Injected
+  Web3 option will inject the web3 object provided my Mist or Metamask browser plug in and interacts with the network provided
+  by these plugins. Web3 Provider option will try to connect to a node running on a network. For example in earlier sections
+  (Refer private network section), we created a private netwrok and using web3 provider option, we can connect to
+  that network, deploy and run the contract on that private network. The easiest options is to use in-memory network which
+  is Javascript VM. Account is the one associated to your wallet. An account will hold the ethers. Gas Limit is the maximum
+  gas that a transaction sends and value is used to send some ether to the contract.
+</p>
+<p>
+  To run the above contract, go to Run tab, select the environement as Javascript VM, select a test account that remix proides,
+  use the default gas limit and click on Create button. Create button will deploy the contract to in-memory network. You
+  can see get and set methods as buttons. If you click on getValue button, it should display the value as 10 which we set
+  in the constructor.
+</p>
+<p>
+  <img src="../assets/solidity/sample_contract_getValue.jpg" class="center noresize">
+</p>
+<p>
+  You can also set the value by passing some value. Now if you click getValue you will get the updated value. The getValue
+  service has returned the updated value as 15.
+</p>
+<p>
+  <img src="../assets/solidity/sample_contract_setValue.jpg" class="center noresize">
+</p>
+<p>
+  Solidity program gets compiled into byte code using EVM (Ethereum Virtual Machine). Each instruction costs some gas. If the
+  gas reaches the passed in Gas limit, the contract stops running automatically. The set function or any write instructions
+  costs gas. Since get function is only reading the data from the blockchain so it doesn't need the gas. That's why if you
+  noticed the getValue function, we have a keyword constant. If you wanted know more about gas, gas limit, how much gas required
+  for a transaction and executing the contract, please visit the blog <a target="_blank" href="https://vomtom.at/what-exactly-is-the-gas-limit-and-the-gas-price-in-ethereum/">Everything you need to know about Gas</a>
+</p>
+<br/>
+<app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
 </mat-card>
-

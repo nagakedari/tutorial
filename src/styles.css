@@ -25,3 +25,12 @@ pre {
     /*white-space: pre-wrap;*/
     overflow: auto;
 }
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+/*.content{
+  padding-left: 25%;
+  padding-right: 25%;
+}*/

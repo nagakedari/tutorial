@@ -8,29 +8,39 @@ import { Component, OnInit } from '@angular/core';
 export class ChaptersComponent implements OnInit {
 
   ethereumTopicTabs = [];
-  selectedTabIndex : any;
+  selectedTabIndex: any;
 
-  constructor(){
+  constructor() {
     this.ethereumTopicTabs = [
-        {name : " Introduction", path : "intro"},
-        {name : " What is Blockchain", path : "blockchain"},
-        {name : " Ethereum EcoSystem", path : "eco"},
-        {name : " How Geth works?", path : "howitworks"},
-        {name : " Working with GETH", path : "geth"},
-        {name : " Types Of Blockchain and Networks", path : "typesofblockchain"},
-        {name : " Creating A Private Network", path : "privatenetwork"},
-        {name : " Mining A Private Network", path : "mining"},
-        {name : " Understanding Smart Contract", path : "smartcontract"},
-        {name : " Getting Started With Solidity", path : "solidity"},
-        {name : " Variables and Types", path : "variabletypes"},
-        {name : " Payable And Global Message Object", path : "globalobject"},
-        {name : " Inheritance In Solidity", path : "inheritance"},
-        {name : " Creating A Decentralized Wallet", path : "wallet"},
-        {name : " Events In Solidity", path : "events"}
+      { name: " Introduction", path: "intro" },
+      {
+        name: "Fundamentals Of Ethereum Blockchain",
+        subItems: [
+          { name: " What is Blockchain", path: "blockchain" },
+          { name: " Ethereum Development Tools", path: "eco" },
+          { name: " How Geth works?", path: "howitworks" },
+          { name: " Working with GETH", path: "geth" },
+          { name: " Types Of Blockchain and Networks", path: "typesofblockchain" },
+          { name: " Private Network", path: "privatenetwork" }
+          // { name: " Mining A Private Network", path: "mining" },
+          // { name: " Smart Contract", path: "smartcontract" }
+        ]
+      },
+      {
+        name: "Building Smart Contracts Using Solidity",
+        subItems: [
+          { name: " Getting Started With Solidity", path: "solidity" },
+          { name: " Variables and Types", path: "variabletypes" },
+          { name: " Payable And Global Message Object", path: "globalobject" },
+          { name: " Inheritance In Solidity", path: "inheritance" },
+          { name: " Creating A Decentralized Wallet", path: "wallet" },
+          { name: " Events In Solidity", path: "events" }
+        ]
+      }
     ];
   }
 
-  selectedTab(tabIndex : any) {
+  selectedTab(tabIndex: any) {
     this.selectedTabIndex = tabIndex;
   }
 

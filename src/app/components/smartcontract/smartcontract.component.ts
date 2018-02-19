@@ -10,7 +10,7 @@ export class SmartcontractComponent implements OnInit {
   nextRoute : any;
   previousRoute : any;
   constructor() { 
-    this.previousRoute = 'mining';
+    this.previousRoute = 'privatenetwork';
     this.nextRoute = 'solidity';
   }
   ngOnInit() {

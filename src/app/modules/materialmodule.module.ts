@@ -9,6 +9,7 @@ import { MatSidenavModule,
          MatMenuModule, 
          MatButtonModule,
          MatCardModule} from '@angular/material';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { MatSidenavModule,
     MatListModule, 
     MatMenuModule, 
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule
   ],
   exports: [
     NoopAnimationsModule,
@@ -32,7 +34,8 @@ import { MatSidenavModule,
     MatListModule, 
     MatMenuModule, 
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule
   ],
   declarations: []
 })

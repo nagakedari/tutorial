@@ -2,7 +2,7 @@
   <br/>
   <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
   <br/>
-  <h1>Creating A Private Network</h1>
+  <h1>Private Network</h1>
   <p>
     Inorder to create a private network, we first need to understand genesis.json file. Go-Ethereum uses this configuration json
     file to create a private network.
@@ -23,7 +23,7 @@
   Let's understand what does each filed mean.
 </p>
 <ul>
-  <li><b>chainId: </b> The example file has set the chainId as 10, you can set to any value except 1, 2 and 3. One is for main
+  <li><b>chainId: </b> The example file has set the chainId as 15, you can set to any value except 1, 2 and 3. One is for main
     network, 2 and 3 is for test network.</li>
   <li><b>homesteadBlock: </b> Ehtereum has seperated in to different releases. The last release is frontier and the latest release
     is homestead. Speficifying homesteadBlock to 0 implies that we want homestead ethereum starting from the block 0.</li>
@@ -33,29 +33,40 @@
   <li><b>gasLimit: </b> Used for deploying contracts. Each contracht in solidity compiles in to an assembly by Ethereum Virtual
     Machine. Each of these assembly instructions takes up some gas and gas limit is the value which limits the logic that
     you can run on miner. The higher the gas limit value, the higher the complexity of the contract.</li>
-  <li><b>alloc: </b> Used to pre allocate ether to certain accounts. We can do this step after creating the network too.</li>
+  <li><b>alloc: </b> Used for pre allocating ether to certain accounts. We can do this step after creating the network too.</li>
 </ul>
 <p>
+  <u>
+    <h4><b>Creating Private Network </b></h4>
+  </u>
   Now that we have some idea on genesis json file, lets create a private network.
 </p>
 <ol>
   <li>Create a json file as mentioned above and save</li>
-  <li>Go to the folder where the json file is and open powershell (for linux or mac, open a terminal)</li>
-  <li>Initialize a chain data folder by running the command: <i><b>geth init .\genesis.json --datadir myprivatenetwork</b></i>.
-    You should see "Succesfully wrote genesis state" log message. Here myprivatenetwork is our new private netwrok. It has
-    geth and keystore folders inside.
-    <p><img src="../assets/privatenetwork/initialise_private_network.jpg"></p>
-  </li>
-  <li>Start our private network myprivatenetwork by running the command: <i><b>geth --datadir .\myprivatenetwork\</b></i>. You
-    should see the same chainId that is specified in genesis.json file, In this case it is 10.
-    <p><img src="../assets/privatenetwork/starting_private_network.jpg"></p>
-  </li>
-  <li>Sometimes its possible that geth tries to synch with other networks which has the same chainId, So in order to avoid that,
-    we can start the network in <b>no discosvery</b> mode by running the command: <i><b>geth --datadir .\myprivatenetwork\ --nodiscover</b></i>.
-    In no disvocer mode, you won't see an UDP listener getting started where as it does in default/former mode.
-    <p><img src="../assets/privatenetwork/starting_private_network_nodiscover.jpg"></p>
-  </li>
+  <li>Open command prompt and enter the following command</li>
+  <p class="center"><i><b><code>geth init path/to/genesis.json --datadir private_network_name</code></b></i></p>
+  <p>Once you run the above command, You should see "Succesfully wrote genesis state" log message which means you have successfully
+    created a private network.
+  </p>
+  <p><img src="../assets/privatenetwork/initialise_private_network.jpg"></p>
 </ol>
+<p>
+  <u>
+    <h4><b>Running Private Network </b></h4>
+  </u>
+</p>
+<p>
+  To Start the private network issue the command: <i><b>geth --datadir .\private_network_name\</b></i>. You should see the
+  same chainId that is specified in genesis.json file, In this case it is 15.
+</p>
+<p><img src="../assets/privatenetwork/starting_private_network.jpg"></p>
+<!--<p>
+  <u>
+    <h4><b>Mining Private Network </b></h4>
+  </u>
+</p>
+<p>
+</p>-->
 <br/>
 <app-navigation [previous]="previousRoute" [next]="nextRoute"></app-navigation>
 </mat-card>
