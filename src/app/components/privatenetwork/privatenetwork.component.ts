@@ -21,7 +21,7 @@ genesisJson : any = {
 previousRoute : any;
   constructor() { 
     this.nextRoute = 'solidity';
-    this.previousRoute = 'typesofblockchain';
+    this.previousRoute = 'geth';
   }
 
 

@@ -10,7 +10,7 @@ export class GethComponent implements OnInit {
   nextRoute : any;
 previousRoute : any;
   constructor() { 
-    this.nextRoute = 'typesofblockchain';
+    this.nextRoute = 'privatenetwork';
     this.previousRoute = 'howitworks';
   }
 

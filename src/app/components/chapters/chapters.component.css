@@ -3,14 +3,27 @@
   color: white;
   
 }*/
-
-.active-tab > mat-expansion-panel > mat-expansion-panel-header,
-.active-tab > mat-expansion-panel > mat-expansion-panel-header > mat-panel-title{
+/*.active-tab > mat-expansion-panel > a {
 background-color: #3385ff;
+  color: white;
+}*/
+
+.active-tab {
+  background-color: #3385ff;
   color: white;
 }
 
 .active-tab > a {
+  background-color: #3385ff;
+  color: white;
+}
+
+.active-tab > mat-expansion-panel > a {
+  background-color: #3385ff;
+  color: white;
+}
+
+.active-sub-tab {
   background-color: #3385ff;
   color: white;
 }

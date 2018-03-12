@@ -12,7 +12,7 @@
         <a (click)="mainSideNav.opened= !mainSideNav.opened" *ngFor="let subitem of tab.subItems" mat-list-item mat-ripple routerLink="{{subitem.path}}"
           data-toggle="tab">{{subitem.name}}</a>
       </mat-expansion-panel>
-      <a (click)="mainSideNav.opened= !mainSideNav.opened" routerLinkActive="active-tab" [routerLinkActiveOptions]="{exact:true}"
+      <a (click)="mainSideNav.opened= !mainSideNav.opened" 
         *ngIf="!tab.subItems" mat-list-item mat-ripple routerLink="{{tab.path}}" data-toggle="tab">{{tab.name}}</a>
     </mat-nav-list>
   </mat-sidenav>
